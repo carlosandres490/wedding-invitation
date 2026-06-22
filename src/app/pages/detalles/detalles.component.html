@@ -1,0 +1,160 @@
+<!-- app/pages/detalles/detalles.component.html -->
+
+<!-- NAVBAR (desktop) -->
+<nav class="navbar">
+  <a (click)="scrollTo('vestimenta')" style="cursor:pointer">Inicio</a>
+  <a (click)="irAInvitacion()" style="cursor:pointer">La boda</a>
+  <a (click)="scrollTo('vestimenta')" style="cursor:pointer">Detalles</a>
+  <a (click)="irAInvitacion()" style="cursor:pointer">Nosotros</a>
+  <a (click)="irAInvitacion()" style="cursor:pointer">Confirmación</a>
+</nav>
+
+<!-- BACK BUTTON (mobile) -->
+ <a class="back-btn" (click)="volver()" style="cursor:pointer">← Volver</a>
+<section class="seccion-vestimenta" id="vestimenta">
+
+  <h1 class="vest-titulo">CÓDIGO DE VESTIMENTA</h1>
+
+  <div class="vest-subtitulo-row">
+    <span class="linea-gold"></span>
+    <span class="vest-subtitulo">Semi-Formal</span>
+    <span class="linea-gold"></span>
+  </div>
+
+  <!-- ELLAS -->
+  <div class="vest-item">
+    <div class="vest-texto">
+      <h3 class="vest-genero">Ellas</h3>
+
+      <ul class="vest-lista">
+        <li>Vestido largo color sólido.</li>
+        <li>Tacones, plataformas, sandalias o como te sientas cómoda.</li>
+        <li>Accesorios al gusto.</li>
+      </ul>
+    </div>
+
+    <img
+      src="../../../assets/img/dresswoman.png"
+      alt=""
+      class="persona-img mujer"
+    />
+  </div>
+
+  <!-- ELLOS -->
+  <div class="vest-item">
+    <div class="vest-texto">
+      <h3 class="vest-genero">Ellos</h3>
+
+      <ul class="vest-lista">
+        <li>Camisa manga larga.</li>
+        <li>Pantalón formal.</li>
+        <li>Saco y corbata opcionales.</li>
+        <li>Zapatos o tenis formales.</li>
+      </ul>
+    </div>
+
+    <img
+      src="../../../assets/img/dressman.png"
+      alt=""
+      class="persona-img hombre"
+    />
+  </div>
+
+  <!-- COLORES -->
+  <div class="colores-section">
+    <p class="colores-label">
+      Colores no permitidos:
+    </p>
+
+    <div class="colores-row">
+      <span class="color-dot blanco"></span>
+      <span class="color-dot beige"></span>
+      <span class="color-dot gris"></span>
+      <span class="color-dot azul"></span>
+    </div>
+  </div>
+
+  <a
+    href="https://pin.it/4U79BC0nk"
+    target="_blank"
+    class="btn-vest"
+  >
+    Encuentra algunas ideas aquí
+  </a>
+
+</section>
+
+<!-- ===== SECCIÓN 2: ALOJAMIENTO & TIPS ===== -->
+<section class="seccion-tips" id="tips">
+  <div class="tips-grid">
+    <!-- Alojamiento -->
+    <div class="card-aloj">
+      <h3 class="card-titulo">ALOJAMIENTO</h3>
+      <p class="card-texto">
+        Si vienes de afuera te puedes hospedar donde prefieras, sin embargo, te recomendamos el hotel del evento, ya que queda a 1 hora aprox de medellín y a sólo 10 min del aeropuerto.
+        Además tendrás <strong>tarifa especial</strong> por ser invitado. Puedes reservar en la página web con este código:
+      </p>
+      <p class="codigo-reserva">MANU&amp;SOFI2026</p>
+      <div class="aloj-btns">
+        <a href="https://www.lagoonhotel.com/?gad_source=1&gad_campaignid=9310761538&gbraid=0AAAAAC2AmsqaO9momO3lkaVOGdbnxyDwY" target="_blank" class="btn-outline-dark">Ir a la página web</a>
+        <a href="https://wa.me/3209281003" target="_blank" class="btn-dark">Hablar con el hotel</a>
+      </div>
+    </div>
+
+    <!-- Tips y Notas -->
+    <div class="card-tips">
+      <h3 class="card-titulo tips-titulo">TIPS Y NOTAS</h3>
+      <ul class="tips-lista">
+        <li>♥ Si todo sale como esperamos, la ceremonia será al aire libre, así que asegúrate de llevar zapatos cómodos y gafas de sol.</li>
+        <li>♥ Lleva algo para abrigarte en la noche.</li>
+        <li>♥ Sal con tiempo, el tráfico los fines de semana desde medellín es muy intenso.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN 3: REGALOS ===== -->
+<section class="seccion-regalos" id="regalos">
+  <h2 class="regalos-titulo">SUGERENCIA DE REGALO</h2>
+  <p class="regalos-texto">El mejor regalo es tu presencia, pero si deseas tener un detalle con nosotros, ayúdanos a seguir construyendo nuestro hogar.</p>
+
+  <div class="regalos-cards">
+    <div class="regalo-card">
+      <div class="regalo-icon">✉</div>
+      <div>
+        <p class="regalo-nombre">Lluvia de sobres</p>
+        <p class="regalo-desc">Llévalo y deposítalo en la cajita mágica</p>
+      </div>
+    </div>
+    <div class="regalo-card">
+      <div class="regalo-icon">⇄</div>
+      <div>
+        <p class="regalo-nombre">Transferencia</p>
+        <p class="regalo-desc">Cuenta de ahorros Bancolombia: 27467553343</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="separador-corazon">
+    <span class="linea-sep"></span>
+    <span>♥</span>
+    <span class="linea-sep"></span>
+  </div>
+
+  <div class="qr-section">
+    <div class="qr-placeholder">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://manusofi.com/fotos" alt="QR Code" />
+    </div>
+    <div class="qr-texto">
+      <h3 class="qr-titulo">Compartimos este día junto a ti</h3>
+      <p>Compártenos tus fotos y videos de este gran día. Queremos guardar todos los recuerdos.</p>
+      <p class="qr-sub">Escanea el código QR y sube tus fotos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="con-amor">Con amor</p>
+  <p class="firma">Manu & Sofi</p>
+</footer>
