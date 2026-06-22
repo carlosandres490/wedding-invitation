@@ -1,0 +1,91 @@
+<!-- app/pages/invitacion/invitacion.component.html -->
+
+<!-- NAVBAR (desktop) -->
+<nav class="navbar">
+  <a (click)="scrollTo('inicio')" style="cursor:pointer">Inicio</a>
+  <a (click)="scrollTo('la-boda')" style="cursor:pointer">La boda</a>
+  <a (click)="scrollTo('detalles')" style="cursor:pointer">Detalles</a>
+  <a (click)="scrollTo('nosotros')" style="cursor:pointer">Nosotros</a>
+  <a (click)="scrollTo('confirmacion')" style="cursor:pointer">Confirmación</a>
+</nav>
+
+<!-- BACK BUTTON (mobile) -->
+<a class="back-btn" (click)="volver()" style="cursor:pointer">← Volver</a>
+
+<!-- ===== SECCIÓN 1: INICIO / FECHA ===== -->
+<section class="seccion-inicio" id="inicio">
+  <div class="overlay-dark"></div>
+  <div class="inicio-content">
+    <div class="fecha-row">
+      <span class="linea"></span>
+      <span class="fecha">26.09.26</span>
+      <span class="linea"></span>
+    </div>
+    <h1 class="nombres-grandes">Manu & Sofi</h1>
+    <p class="frase">"El amor es paciente, el amor es bondadoso. No envidia, no se jacta, no se enorgullece"</p>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN 2: CUANDO & DONDE ===== -->
+<section class="seccion-boda" id="la-boda">
+  <div class="boda-izq">
+    <p class="acompañanos">Acompáñanos</p>
+    <div class="linea-vertical"></div>
+    <h2 class="cuando-donde">CUANDO<br><span class="ampersand-green">&</span>DONDE</h2>
+  </div>
+  <div class="boda-der">
+    <h3 class="boda-fecha">Sábado 26 de Septiembre</h3>
+    <p class="hotel-nombre">Hotel Lagoon Llanogrande</p>
+    <p class="hotel-dir">Km 13+800 vía JMC vereda El Tablazo, Rionegro, Antioquia</p>
+    <a href="https://maps.google.com" target="_blank" class="btn-primary"
+      style="margin: 1rem 0; display:inline-block">Cómo llegar</a>
+
+    <div class="timeline">
+      <div class="timeline-item"><span class="dot"></span><span>2PM: Recepción</span></div>
+      <div class="timeline-item"><span class="dot"></span><span>3PM: Ceremonia</span></div>
+      <div class="timeline-item"><span class="dot"></span><span>4PM: Cóctel</span></div>
+      <div class="timeline-item"><span class="dot"></span><span>5PM: Brindemos</span></div>
+      <div class="timeline-item"><span class="dot"></span><span>6 - 10PM: Cena</span></div>
+    </div>
+
+    <button class="btn-primary" style="margin-top:1.5rem" (click)="irADetalles()">Más detalles</button>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN 3: NOSOTROS / FOTOS ===== -->
+<section class="seccion-fotos" id="nosotros">
+  <h2 class="fotos-titulo">Un poco de nuestra historia</h2>
+  <div class="carrusel-wrapper">
+    <button class="carr-btn prev" (click)="prevFoto()">&#8249;</button>
+    <div class="carrusel">
+      <div class="foto-slide" [style.transform]="'translateX(-' + (fotoActual * 100) + '%)'">
+        <img *ngFor="let f of fotos" [src]="f" alt="Foto de Manu y Sofi" />
+      </div>
+    </div>
+    <button class="carr-btn next" (click)="nextFoto()">&#8250;</button>
+  </div>
+  <div class="dots">
+    <span *ngFor="let f of fotos; let i = index" class="dot-carr" [class.active]="i === fotoActual"
+      (click)="fotoActual = i"></span>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN 4: CONFIRMACIÓN ===== -->
+<section class="seccion-confirmacion" id="confirmacion">
+  <div class="confirm-izq">
+    <div class="sobre-icon">✉</div>
+    <h3 class="confirm-titulo">Por favor confirma tu asistencia</h3>
+    <p class="confirm-texto">Si ya habías confirmado, hazlo de nuevo aquí para seguir organizando todos los detalles</p>
+    <p class="confirm-fecha"><strong>Fecha límite para confirmar: 1 de Agosto 2026</strong></p>
+    <button class="btn-green" (click)="confirmar()">Confirmar</button>
+  </div>
+  <div class="confirm-der">
+    <h2 class="estas-listo">¿ESTÁS<br>LISTO?</h2>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="con-amor">Con amor</p>
+  <p class="firma">Manu & Sofi</p>
+</footer>

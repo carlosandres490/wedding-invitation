@@ -1,0 +1,477 @@
+/* app/pages/detalles/detalles.component.css */
+
+/* ===== VESTIMENTA ===== */
+.seccion-vestimenta {
+  background: #7d8da1;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.vest-titulo {
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.vest-subtitulo-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.linea-gold {
+  width: 80px;
+  height: 1px;
+  background: #d8c3a5;
+}
+
+.vest-subtitulo {
+  font-size: 2rem;
+  color: #e3cfb4;
+  font-style: italic;
+}
+
+/* ITEMS */
+
+.vest-item {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.vest-texto {
+  flex: 1;
+}
+
+.vest-genero {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vest-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.vest-lista li {
+  margin-bottom: 0.8rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* IMÁGENES */
+
+.persona-img {
+  object-fit: contain;
+}
+
+.mujer {
+  width: 120px;
+}
+
+.hombre {
+  width: 110px;
+}
+
+/* COLORES */
+
+.colores-section {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.colores-label {
+  color: #e3cfb4;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.colores-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.blanco {
+  background: white;
+}
+
+.beige {
+  background: #d9cdbf;
+}
+
+.gris {
+  background: #bdb6ab;
+}
+
+.azul {
+  background: #bfc9d8;
+}
+
+/* BOTÓN */
+
+.btn-vest {
+  margin-top: 3rem;
+  background: white;
+  color: #7d8da1;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-vest:hover {
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .vest-item {
+    align-items: center;
+  }
+
+  .vest-titulo {
+    font-size: 2.3rem;
+  }
+
+  .vest-genero {
+    font-size: 1.5rem;
+  }
+
+  .vest-lista li {
+    font-size: 1rem;
+  }
+
+  .mujer {
+    width: 90px;
+  }
+
+  .hombre {
+    width: 80px;
+  }
+}
+
+/* ===== TIPS & ALOJAMIENTO ===== */
+.seccion-tips {
+  background: var(--cream);
+  padding: 5rem 3rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 860px;
+  width: 100%;
+}
+
+.card-aloj {
+  background: var(--blue-grey-light);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.card-tips {
+  background: var(--cream-dark);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+}
+
+.card-titulo {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.05em;
+}
+
+.tips-titulo {
+  margin-bottom: 1.2rem;
+}
+
+.card-texto {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.codigo-reserva {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.05em;
+}
+
+.aloj-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+}
+
+.btn-outline-dark {
+  display: block;
+  text-align: center;
+  background: transparent;
+  color: var(--text-dark);
+  border: 1.5px solid var(--text-dark);
+  border-radius: 30px;
+  padding: 0.7rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-outline-dark:hover {
+  background: var(--text-dark);
+  color: var(--white);
+}
+
+.btn-dark {
+  display: block;
+  text-align: center;
+  background: var(--blue-grey-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-dark:hover {
+  background: #4a5f73;
+}
+
+.tips-lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tips-lista li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* ===== REGALOS ===== */
+.seccion-regalos {
+  background: var(--cream-dark);
+  padding: 5rem 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.regalos-titulo {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.regalos-texto {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.regalos-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.regalo-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--white);
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  border: 1px solid rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.regalo-icon {
+  font-size: 1.5rem;
+  background: rgba(122, 144, 164, 0.15);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--blue-grey);
+}
+
+.regalo-nombre {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.regalo-desc {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-medium);
+  margin-top: 0.2rem;
+}
+
+.separador-corazon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--green-sage);
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.linea-sep {
+  flex: 1;
+  height: 1px;
+  background: rgba(125, 155, 122, 0.4);
+}
+
+.qr-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 600px;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.qr-placeholder img {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+}
+
+.qr-titulo {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.qr-texto p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.qr-sub {
+  font-style: italic;
+  margin-top: 0.5rem !important;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+  .seccion-vestimenta {
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  .vest-titulo {
+    font-size: 2rem;
+  }
+
+  .vest-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .vest-img-center {
+    order: -1;
+  }
+
+  .vest-img {
+    width: 160px;
+    height: 240px;
+  }
+
+  .vest-col {
+    text-align: center;
+  }
+
+  .colores-row {
+    justify-content: center;
+  }
+
+  /* TIPS */
+  .seccion-tips {
+    padding: 3rem 1.5rem;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* REGALOS */
+  .seccion-regalos {
+    padding: 3rem 1.5rem 0;
+  }
+
+  .regalos-titulo {
+    font-size: 1.5rem;
+  }
+
+  .qr-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}

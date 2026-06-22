@@ -1,0 +1,109 @@
+/* app/pages/entrada/entrada.component.css */
+.entrada-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../../assets/img/main.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(180, 195, 210, 0.35);
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  background: rgba(245, 240, 232, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 520px;
+  text-align: center;
+}
+
+.logo-circle {
+  position: absolute;
+  top: -45px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1.5px solid var(--blue-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  background: rgba(245, 240, 232, 0.88);
+  z-index: 3;
+}
+
+.logo-text {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--blue-grey-dark);
+}
+
+.bienvenidos {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text-medium);
+  letter-spacing: 0.02em;
+  margin-top: 18px;
+}
+
+.nombres {
+  font-family: var(--font-script);
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--blue-grey-dark);
+  line-height: 1.1;
+}
+
+.btn-ingresar {
+  background: var(--blue-grey);
+  color: #7C8D9F;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.03em;
+}
+
+.btn-ingresar:hover {
+  background: var(--blue-grey-dark);
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+  }
+
+  .nombres {
+    font-size: 3rem;
+  }
+
+  .logo-circle {
+    width: 75px;
+    height: 75px;
+  }
+}
