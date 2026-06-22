@@ -60,6 +60,15 @@
   text-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
 
+.nombres{
+  font-family: 'Caramel', cursive;
+  font-size: 120px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
 .frase {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -89,7 +98,7 @@
 }
 
 .acompañanos {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 25px;
   color: #677463;
@@ -158,7 +167,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-  padding: 0.5rem 0 0.5rem 2.5rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
   margin: 1rem 0;
   border-left: 2px solid var(--green-sage);
   align-items: flex-start;
@@ -177,7 +186,7 @@
 
 .dot {
   position: absolute;
-  left: -3rem;
+  left: -2rem;
   top: 50%;
   transform: translateY(-50%);
   width: 12px;
@@ -228,11 +237,12 @@
   display: flex;
   transition: transform 0.4s ease;
   height: 100%;
+  width: 100%;
 }
 
 .foto-slide img {
-  min-width: 100%;
-  width: 100%;
+  flex: 0 0 110%;
+  display: block;
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
@@ -311,22 +321,27 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 30px;
   font-weight: 400;
-  color: var(--text-dark);
+  font-style: regular;
+  color: #677463;
   max-width: 300px;
 }
 
 .confirm-texto {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--text-medium);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: regular;
+  color: #919F8E;
   max-width: 320px;
   line-height: 1.6;
 }
 
 .confirm-fecha {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--text-dark);
+  font-weight: 600;
+  font-style: semibold;
+  font-size: 18px;
+  color: #919F8E;
 }
 
 .confirm-der {
@@ -338,10 +353,19 @@
 }
 
 .estas-listo {
-  font-family: var(--font-serif);
+  font-family: 'Vidaloka', serif;
   font-size: 4rem;
   font-weight: 700;
   color: var(--white);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.pregunta-bounce {
+  font-family: 'birthstone-bounce', serif;
+  font-size: 100px;
+  font-weight: 400;
+  color: #677463;
   line-height: 1.1;
   text-align: center;
 }
@@ -370,7 +394,7 @@
   }
 
   .cuando-donde {
-    font-size: 2.5rem;
+    font-size: 50px;
   }
 
   .ampersand-green {

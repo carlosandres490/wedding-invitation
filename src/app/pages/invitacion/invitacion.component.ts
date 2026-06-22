@@ -10,6 +10,7 @@ import { NavigationService } from '../../services/navigation.service';
 })
 export class InvitacionComponent {
   fotoActual = 0;
+  touchStartX = 0;
 
   fotos: string[] = [
     'assets/img/fotoUno.png',
@@ -48,6 +49,22 @@ export class InvitacionComponent {
 
   nextFoto() {
     this.fotoActual = this.fotoActual < this.fotos.length - 1 ? this.fotoActual + 1 : 0;
+  }
+
+  onTouchStart(event: TouchEvent) {
+    this.touchStartX = event.touches[0].clientX;
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    const touchEndX = event.changedTouches[0].clientX;
+    const diff = this.touchStartX - touchEndX;
+    
+    // Si desliza más de 50px, navega
+    if (diff > 50) {
+      this.nextFoto(); // desliza hacia la izquierda = siguiente foto
+    } else if (diff < -50) {
+      this.prevFoto(); // desliza hacia la derecha = foto anterior
+    }
   }
 
   confirmar() {

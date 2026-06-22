@@ -21,7 +21,9 @@
       <span class="fecha">26.09.26</span>
       <span class="linea"></span>
     </div>
-    <h1 class="nombres-grandes">Manu & Sofi</h1>
+    <h1 class="nombres-grandes">Manu</h1>
+    <h1 class="nombres">&</h1>
+    <h1 class="nombres-grandes">Sofi</h1>
     <p class="frase">"El amor es paciente, el amor es bondadoso. No envidia, no se jacta, no se enorgullece"</p>
   </div>
 </section>
@@ -37,7 +39,7 @@
     <h3 class="boda-fecha">Sábado 26 de Septiembre</h3>
     <p class="hotel-nombre">Hotel Lagoon Llanogrande</p>
     <p class="hotel-dir">Km 13+800 vía JMC vereda El Tablazo, Rionegro, Antioquia</p>
-    <a href="https://maps.google.com" target="_blank" class="btn-primary"
+    <a href="https://maps.app.goo.gl/TzpVBJ71Qdphr9TF9?g_st=ic" target="_blank" class="btn-primary"
       style="margin: 1rem 0; display:inline-block">Cómo llegar</a>
 
     <div class="timeline">
@@ -54,11 +56,14 @@
 
 <!-- ===== SECCIÓN 3: NOSOTROS / FOTOS ===== -->
 <section class="seccion-fotos" id="nosotros">
-  <h2 class="fotos-titulo">Un poco de nuestra historia</h2>
+  <h2 class="fotos-titulo">Un poco de nuestra <br> historia</h2>
   <div class="carrusel-wrapper">
     <button class="carr-btn prev" (click)="prevFoto()">&#8249;</button>
     <div class="carrusel">
-      <div class="foto-slide" [style.transform]="'translateX(-' + (fotoActual * 100) + '%)'">
+      <div class="foto-slide" 
+        [style.transform]="'translateX(-' + (fotoActual * 110) + '%)'"
+        (touchstart)="onTouchStart($event)"
+        (touchend)="onTouchEnd($event)">
         <img *ngFor="let f of fotos" [src]="f" alt="Foto de Manu y Sofi" />
       </div>
     </div>
@@ -76,11 +81,12 @@
     <div class="sobre-icon">✉</div>
     <h3 class="confirm-titulo">Por favor confirma tu asistencia</h3>
     <p class="confirm-texto">Si ya habías confirmado, hazlo de nuevo aquí para seguir organizando todos los detalles</p>
-    <p class="confirm-fecha"><strong>Fecha límite para confirmar: 1 de Agosto 2026</strong></p>
+    <br>
+    <p class="confirm-fecha"><strong>Fecha límite para confirmar: <br> 1 de Agosto 2026</strong></p>
     <button class="btn-green" (click)="confirmar()">Confirmar</button>
   </div>
   <div class="confirm-der">
-    <h2 class="estas-listo">¿ESTÁS<br>LISTO?</h2>
+    <h2 class="estas-listo"><span class="pregunta-bounce">¿</span>ESTÁS<br>LISTO<span class="pregunta-bounce">?</span></h2>
   </div>
 </section>
 

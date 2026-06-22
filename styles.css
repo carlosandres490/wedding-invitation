@@ -12,7 +12,7 @@
   --blue-section: #8FA3B3;
   --cream: #F2EEE9;
   --cream-dark: #EDE7D9;
-  --green-sage: #7D9B7A;
+  --green-sage: #919F8E;
   --green-sage-dark: #5A7357;
   --green-footer: #6B8C68;
   --text-dark: #3D3D3D;
@@ -90,7 +90,7 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: #919F8E;
+  background: #677463;
   padding: 1.8rem 2rem;
   text-align: center;
 }

@@ -12,7 +12,9 @@
 }
 
 .vest-titulo {
-  font-size: 3rem;
+  font-family: 'vidaloka', serif;
+  font-style: regular;
+  font-size: 40px;
   text-align: center;
   letter-spacing: 4px;
   margin-bottom: 1rem;
@@ -21,17 +23,21 @@
 .vest-subtitulo-row {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
   margin-bottom: 3rem;
+  gap: 8px;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .linea-gold {
-  width: 80px;
+  width: 50px;
   height: 1px;
   background: #d8c3a5;
 }
 
 .vest-subtitulo {
+  font-family: 'birthstone-bounce', serif;
   font-size: 2rem;
   color: #e3cfb4;
   font-style: italic;
@@ -54,7 +60,10 @@
 }
 
 .vest-genero {
-  font-size: 2rem;
+  font-family: 'cormorant-garamond', serif;
+  font-weight: 700;
+  font-size: 30px;
+  font-style: bold;
   margin-bottom: 1rem;
 }
 
@@ -87,19 +96,28 @@
 
 .colores-section {
   margin-top: 1rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .colores-label {
   color: #e3cfb4;
-  margin-bottom: 1rem;
+  margin: 0;
   font-size: 1.1rem;
+  white-space: nowrap;
 }
 
 .colores-row {
   display: flex;
-  justify-content: center;
   gap: 0.8rem;
+}
+
+.colores-section > * {
+  flex-shrink: 0;
 }
 
 .color-dot {
@@ -128,8 +146,8 @@
 
 .btn-vest {
   margin-top: 3rem;
-  background: white;
-  color: #7d8da1;
+  background: #F2EEE9;
+  color: #7C8D9F;
   padding: 1rem 2rem;
   border-radius: 999px;
   text-decoration: none;
@@ -205,30 +223,38 @@
 }
 
 .card-titulo {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  letter-spacing: 0.05em;
+  font-family: 'Birthstone Bounce', serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: regular;
+  color: #F2EEE9;
+  letter-spacing: 0px;
 }
 
 .tips-titulo {
+  font-family: 'Birthstone Bounce', serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 30px;
+  color: #677463;
   margin-bottom: 1.2rem;
 }
 
 .card-texto {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--text-dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: regular;
+  color: #677463;
   line-height: 1.7;
 }
 
 .codigo-reserva {
   font-family: var(--font-body);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  letter-spacing: 0.05em;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: regular;
+  color:#677463;
+  letter-spacing: 0px;
 }
 
 .aloj-btns {
@@ -241,13 +267,12 @@
 .btn-outline-dark {
   display: block;
   text-align: center;
-  background: transparent;
-  color: var(--text-dark);
-  border: 1.5px solid var(--text-dark);
+  background: #7C8D9F;
+  color: var(--white);
   border-radius: 30px;
   padding: 0.7rem 1.5rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
@@ -262,13 +287,13 @@
 .btn-dark {
   display: block;
   text-align: center;
-  background: var(--blue-grey-dark);
-  color: var(--white);
+  background: var(--white);
+  color: #7C8D9F;
   border: none;
   border-radius: 30px;
   padding: 0.7rem 1.5rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
