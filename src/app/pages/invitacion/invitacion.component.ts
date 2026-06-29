@@ -68,6 +68,6 @@ export class InvitacionComponent {
   }
 
   confirmar() {
-    alert('¡Gracias! Tu confirmación ha sido registrada. 💍');
+    window.open('https://form.jotform.com/261494475674672', '_blank');
   }
 }
