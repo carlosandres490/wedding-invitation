@@ -39,19 +39,11 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: 1.5px solid var(--blue-grey);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
-  background: rgba(245, 240, 232, 0.88);
   z-index: 3;
-}
-
-.logo-text {
-  font-family: var(--font-script);
-  font-size: 1.8rem;
-  color: var(--blue-grey-dark);
 }
 
 .bienvenidos {

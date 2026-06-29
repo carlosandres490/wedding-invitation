@@ -21,7 +21,7 @@
   z-index: 2;
   text-align: center;
   color: var(--white);
-  padding: 2rem;
+  padding: 52px 32px;
   max-width: 700px;
 }
 .fecha-row {
@@ -96,7 +96,7 @@
 }
 .cuando-donde {
   font-family: 'Vidaloka', serif;
-  font-size: 50px;
+  font-size: 60px;
   color: var(--white);
   line-height: 1.1;
   letter-spacing: 0.05em;
@@ -104,7 +104,7 @@
 .ampersand-green {
   font-family: 'Euphoria Script', cursive;
   color: var(--green-sage-dark);
-  font-size: 3.5rem;
+  font-size: 60px;
 }
 .boda-der {
   background: var(--cream);
@@ -136,6 +136,7 @@
   max-width: 350px;
   line-height: 1.5;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 .timeline {
   display: flex;
@@ -180,7 +181,7 @@
   margin-top: 30px;
   font-family: var(--font-script);
   font-size: 40px;
-  color: var(--text-dark);
+  color: #677463;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -264,8 +265,8 @@
   font-size: 2.5rem;
   color: var(--blue-grey);
   background: rgba(122, 144, 164, 0.15);
-  width: 70px;
-  height: 70px;
+  width: 87px;
+  height: 87px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -299,20 +300,18 @@
 }
 .estas-listo {
   font-family: 'Vidaloka', serif;
-  font-size: 4rem;
+  font-size: 60px;
   font-weight: 700;
   color: var(--white);
   line-height: 1.1;
   text-align: center;
 }
 .pregunta-bounce {
-  display: inline-block;
+  font-family: 'Birthstone Bounce', serif;
+  font-size: 70px;
+  font-style: regular;
+  color: #677463;
   vertical-align: middle;
-  animation: birthstone-bounce 1.2s ease-in-out infinite;
-}
-@keyframes birthstone-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
 @media (max-width: 768px) {
   .seccion-inicio { padding-top: 0; }
@@ -320,8 +319,8 @@
   .fecha-row .linea { width: 82px; }
   .seccion-boda { grid-template-columns: 1fr; }
   .boda-izq { padding: 3rem 2rem; }
-  .cuando-donde { font-size: 50px; }
-  .ampersand-green { font-size: 2.5rem; }
+  .cuando-donde { font-size: 60px; }
+  .ampersand-green { font-size: 60px; }
   .boda-der { padding: 3rem 2rem; }
   .timeline { align-items: center; }
   .carrusel { aspect-ratio: 3/4; }
@@ -329,5 +328,5 @@
   .seccion-confirmacion { grid-template-columns: 1fr; grid-template-rows: auto auto; }
   .confirm-izq { order: 2; padding: 3rem 2rem; }
   .confirm-der { order: 1; padding: 3rem 2rem; }
-  .estas-listo { font-size: 3rem; }
+  .estas-listo { font-size: 60px; }
 }
