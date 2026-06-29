@@ -103,6 +103,7 @@
 }
 
 .colores-label {
+  font-family: 'Cormorant Garamond', serif;
   color: #e3cfb4;
   margin: 0;
   font-size: 1.1rem;
@@ -111,10 +112,10 @@
 
 .colores-row {
   display: flex;
-  gap: 0.8rem;
+  gap: 8px;
 }
 
-.colores-section > * {
+.colores-section>* {
   flex-shrink: 0;
 }
 
@@ -165,7 +166,7 @@
   }
 
   .vest-titulo {
-    font-size: 2.3rem;
+    font-size: 40px;
   }
 
   .vest-genero {
@@ -222,7 +223,7 @@
 
 .card-titulo {
   font-family: 'Birthstone Bounce', serif;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 400;
   font-style: regular;
   color: #F2EEE9;
@@ -233,9 +234,10 @@
   font-family: 'Birthstone Bounce', serif;
   font-weight: 400;
   font-style: regular;
-  font-size: 30px;
+  font-size: 50px;
   color: #677463;
   margin-bottom: 1.2rem;
+  text-align: center;
 }
 
 .card-texto {
@@ -251,7 +253,7 @@
   font-size: 20px;
   font-weight: 400;
   font-style: regular;
-  color:#677463;
+  color: #677463;
   letter-spacing: 0px;
 }
 
@@ -285,7 +287,7 @@
 .btn-dark {
   display: block;
   text-align: center;
-  background: var(--white);
+  background: #F2EEE9;
   color: #7C8D9F;
   border: none;
   border-radius: 30px;
@@ -313,14 +315,24 @@
 .tips-lista li {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: var(--text-medium);
+  color: #677463;
   line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.tip-icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
 }
 
 /* ===== REGALOS ===== */
 .seccion-regalos {
   background: var(--cream-dark);
-  padding: 5rem 3rem 0;
+  padding: 34px 24px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -328,29 +340,51 @@
 }
 
 .regalos-titulo {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-dark);
+  font-family: 'Vidaloka', serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: regular;
+  color: #7C8D9F;
   letter-spacing: 0.06em;
   margin-bottom: 1rem;
 }
 
 .regalos-texto {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: var(--text-medium);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #7C8D9F;
   max-width: 520px;
   line-height: 1.7;
   margin-bottom: 2rem;
 }
 
+.regalos-box {
+  width: 100%;
+  max-width: 360px;
+  border: 2px solid #7C8D9F;
+  border-radius: 22px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.regalo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
 .regalos-cards {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  /* ← era row, ahora columna */
+  gap: 0.75rem;
+  /* ← reducido de 1.5rem */
   margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 100%;
+  max-width: 340px;
+  /* ← nuevo, para que no se estire */
 }
 
 .regalo-card {
@@ -360,81 +394,143 @@
   background: var(--white);
   border-radius: 14px;
   padding: 1rem 1.5rem;
-  min-width: 220px;
-  border: 1px solid rgba(0,0,0,0.06);
+  min-width: unset;
+  /* ← era 220px, ahora sin mínimo */
+  width: 100%;
+  /* ← nuevo */
+  border: 1px solid rgba(0, 0, 0, 0.06);
   text-align: left;
 }
 
 .regalo-icon {
-  font-size: 1.5rem;
-  background: rgba(122, 144, 164, 0.15);
-  width: 48px;
-  height: 48px;
+
+  width: 50px;
+  height: 50px;
+
   border-radius: 50%;
+
+  background: #d8d8d8;
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  font-size: 22px;
+
   flex-shrink: 0;
-  color: var(--blue-grey);
 }
 
-.regalo-nombre {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--text-dark);
-}
-
-.regalo-desc {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  color: var(--text-medium);
-  margin-top: 0.2rem;
-}
-
-.separador-corazon {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: var(--green-sage);
-  margin-bottom: 2.5rem;
-  width: 100%;
-  max-width: 500px;
-}
-
-.linea-sep {
-  flex: 1;
-  height: 1px;
-  background: rgba(125, 155, 122, 0.4);
-}
-
-.qr-section {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  max-width: 600px;
-  margin-bottom: 4rem;
+.regalo-info {
   text-align: left;
 }
 
+.regalo-nombre {
+  margin: 0;
+
+  font-family: var(--font-serif);
+
+  font-size: 1.1rem;
+
+  color:#7C8D9F;
+}
+
+.regalo-desc {
+
+  margin-top: .3rem;
+
+  line-height: 1.5;
+
+  color: #7C8D9F;
+
+  font-size: .9rem;
+}
+
+.separador-corazon {
+
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+  align-items: center;
+
+  gap: .8rem;
+
+  margin: 24px 0;
+}
+
+.linea-sep {
+
+  flex: 1;
+
+  height: 2px;
+
+  background: #7c8b7d;
+}
+
+.corazon-img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.qr-section {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  max-width: 420px;
+
+  margin: 0 auto;
+}
+
 .qr-placeholder img {
-  width: 140px;
-  height: 140px;
-  border-radius: 12px;
+
+  width: 100px;
+
+  height: 100px;
+
+  border-radius: 14px;
 }
 
-.qr-titulo {
-  font-family: var(--font-script);
-  font-size: 1.8rem;
-  color: var(--text-dark);
-  margin-bottom: 0.5rem;
+.qr-title {
+  font-family: 'Vidaloka', serif;
+  font-size:28px;
+  font-weight: 400;
+  color: #919F8E;
+  letter-spacing: .08em;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.qr-texto p {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--text-medium);
-  line-height: 1.6;
+.qr-texto {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-style: medium;
+  color: #919F8E;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.qr-footer {
+
+  margin-top: 2rem;
+
+  margin-bottom: 4rem;
+
+  color: #919F8E;
+
+  text-align: center;
+
+  font-size: 1rem;
 }
 
 .qr-sub {
@@ -444,12 +540,95 @@
 
 /* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
+
+  .seccion-regalos {
+    padding: 34px 24px 0;
+  }
+
+  .regalos-titulo {
+    font-family: 'Vidaloka', serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: regular;
+    color: #7C8D9F;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .regalos-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: #7C8D9F;
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .regalos-box {
+    max-width: 100%;
+    padding: 1.3rem;
+  }
+
+  .regalo-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .regalo-nombre {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color:#7C8D9F;
+  }
+
+  .regalo-desc {
+    margin-top: .3rem;
+    line-height: 1.5;
+    color: #7C8D9F;
+    font-size: .9rem;
+  }
+
+  .qr-title {
+    font-family: 'Vidaloka', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #919F8E;
+    letter-spacing: .08em;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .qr-section {
+    gap: 1.2rem;
+    max-width: 100%;
+  }
+
+  .qr-placeholder img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .qr-texto p {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: medium;
+    color: #919F8E;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .qr-footer {
+    font-size: .95rem;
+    margin-bottom: 3rem;
+  }
+
   .seccion-vestimenta {
     padding: 5rem 1.5rem 3rem;
   }
 
   .vest-titulo {
-    font-size: 2rem;
+    font-size: 40px;
   }
 
   .vest-grid {
@@ -483,18 +662,26 @@
     grid-template-columns: 1fr;
   }
 
-  /* REGALOS */
-  .seccion-regalos {
-    padding: 3rem 1.5rem 0;
-  }
-
-  .regalos-titulo {
-    font-size: 1.5rem;
-  }
-
-  .qr-section {
+  .regalos-cards {
     flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
+    /* ← cards apiladas */
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .regalo-card {
+    min-width: unset;
+    /* ← quita el mínimo de 220px */
+    width: 100%;
+  }
+
+  .qr-titulo {
+    font-family: var(--font-serif);
+    /* ← serif en vez de script */
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.4;
   }
 }
