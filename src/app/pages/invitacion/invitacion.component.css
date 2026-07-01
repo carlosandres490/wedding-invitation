@@ -59,6 +59,9 @@
   margin-bottom: 2rem;
   text-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
+.caramel-symbol {
+  font-family: 'Caramel', cursive;
+}
 .frase {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -198,6 +201,13 @@
   overflow: hidden;
   border-radius: 16px;
   aspect-ratio: 4/5;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+.carrusel-wrapper, .carrusel, .foto-slide, .foto-slide img {
+  touch-action: pan-y;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 .foto-slide {
   display: flex;
