@@ -11,6 +11,10 @@ import { NavigationService } from '../../services/navigation.service';
 export class InvitacionComponent {
   fotoActual = 0;
   touchStartX = 0;
+  touchStartY = 0;
+  swipeThreshold = 50;
+  swipeHandled = false;
+  swipeMode: 'touch' | 'pointer' | null = null;
 
   fotos: string[] = [
     'assets/img/fotoUno.png',
@@ -52,19 +56,101 @@ export class InvitacionComponent {
   }
 
   onTouchStart(event: TouchEvent) {
+    if (this.swipeMode && this.swipeMode !== 'touch') {
+      return;
+    }
+    this.swipeMode = 'touch';
+    this.swipeHandled = false;
     this.touchStartX = event.touches[0].clientX;
+    this.touchStartY = event.touches[0].clientY;
+  }
+
+  onTouchMove(event: TouchEvent) {
+    if (this.swipeMode !== 'touch') {
+      return;
+    }
+    const touch = event.touches[0];
+    const diffX = Math.abs(this.touchStartX - touch.clientX);
+    const diffY = Math.abs(this.touchStartY - touch.clientY);
+
+    if (diffX > diffY) {
+      event.preventDefault();
+    }
   }
 
   onTouchEnd(event: TouchEvent) {
-    const touchEndX = event.changedTouches[0].clientX;
-    const diff = this.touchStartX - touchEndX;
-    
-    // Si desliza más de 50px, navega
-    if (diff > 50) {
-      this.nextFoto(); // desliza hacia la izquierda = siguiente foto
-    } else if (diff < -50) {
-      this.prevFoto(); // desliza hacia la derecha = foto anterior
+    if (this.swipeMode !== 'touch' || this.swipeHandled) {
+      this.resetSwipe();
+      return;
     }
+    this.swipeHandled = true;
+
+    const touchEndX = event.changedTouches[0].clientX;
+    const touchEndY = event.changedTouches[0].clientY;
+    const diffX = this.touchStartX - touchEndX;
+    const diffY = Math.abs(this.touchStartY - touchEndY);
+
+    if (Math.abs(diffX) >= 40 && diffY <= 80) {
+      if (diffX > this.swipeThreshold) {
+        this.nextFoto();
+      } else if (diffX < -this.swipeThreshold) {
+        this.prevFoto();
+      }
+    }
+
+    this.resetSwipe();
+  }
+
+  onPointerDown(event: PointerEvent) {
+    if (this.swipeMode && this.swipeMode !== 'pointer') {
+      return;
+    }
+    this.swipeMode = 'pointer';
+    this.swipeHandled = false;
+    this.touchStartX = event.clientX;
+    this.touchStartY = event.clientY;
+  }
+
+  onPointerMove(event: PointerEvent) {
+    if (event.isPrimary) {
+      const diffX = Math.abs(this.touchStartX - event.clientX);
+      const diffY = Math.abs(this.touchStartY - event.clientY);
+      if (diffX > diffY) {
+        event.preventDefault();
+      }
+    }
+  }
+
+  onPointerUp(event: PointerEvent) {
+    if (this.swipeMode !== 'pointer' || !event.isPrimary || this.swipeHandled) {
+      this.resetSwipe();
+      return;
+    }
+    this.swipeHandled = true;
+
+    const diffX = this.touchStartX - event.clientX;
+    const diffY = Math.abs(this.touchStartY - event.clientY);
+
+    if (Math.abs(diffX) >= 40 && diffY <= 80) {
+      if (diffX > this.swipeThreshold) {
+        this.nextFoto();
+      } else if (diffX < -this.swipeThreshold) {
+        this.prevFoto();
+      }
+    }
+
+    this.resetSwipe();
+  }
+
+  onTouchCancel() {
+    this.resetSwipe();
+  }
+
+  private resetSwipe() {
+    this.touchStartX = 0;
+    this.touchStartY = 0;
+    this.swipeHandled = false;
+    this.swipeMode = null;
   }
 
   confirmar() {

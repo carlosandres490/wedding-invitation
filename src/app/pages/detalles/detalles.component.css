@@ -49,7 +49,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 3rem;
   gap: 2rem;
 }
 
@@ -100,6 +99,7 @@
   gap: 1rem;
   flex-wrap: nowrap;
   overflow-x: auto;
+  margin-bottom: 40px;
 }
 
 .colores-label {
@@ -144,7 +144,6 @@
 /* BOTÓN */
 
 .btn-vest {
-  margin-top: 3rem;
   background: #F2EEE9;
   color: #7C8D9F;
   padding: 1rem 2rem;
@@ -443,6 +442,10 @@
   color: #7C8D9F;
 
   font-size: .9rem;
+}
+
+.caramel-symbol {
+  font-family: 'Caramel', cursive;
 }
 
 .separador-corazon {
